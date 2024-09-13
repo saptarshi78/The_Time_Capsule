@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Capsule</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1> Time Capsule</h1>
+    <form id="capsuleForm" enctype="multipart/form-data">
+        <div>
+            <label for="message">Message (max 5000 characters):</label>
+            <textarea id="message" name="message" maxlength="5000" required></textarea>
+        </div>
+        <div>
+            <label for="openDate">Open Date and Time:</label>
+            <input type="datetime-local" id="openDate" name="openDate" required>
+        </div>
+        <div>
+            <label for="image">Optional Image (PNG/JPG only, max 2MB):</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+        </div>
+        <button type="submit">Save Capsule</button>
+    </form>
+    <p id="response"></p>
+    <script>
+        document.getElementById('capsuleForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            try {
+                const response = await fetch('/api/capsules', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    document.getElementById('response').innerText = `Capsule created! Share this link: ${result.link}`;
+                } else {
+                    document.getElementById('response').innerText = `Error: ${result.error}`;
+                }
+            } catch (error) {
+                document.getElementById('response').innerText = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
