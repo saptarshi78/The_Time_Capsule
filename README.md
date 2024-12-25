@@ -87,6 +87,10 @@ The **Time Capsule** project is a web application that allows users to send digi
 
 - You can visit the live version of the Time Capsule web application at [Time Capsule Live](https://the-time-capsule.onrender.com/).
 
+## Preview Live Website
+
+![Preview](https://github.com/saptarshi78/The_time_capsule/blob/main/image.png?raw=true) 
+
 ## Conclusion
 
 This project helps users to store their memories in a digital time capsule and access them in the future. The application uses MongoDB for data storage and Node.js with Express.js for backend development. With a simple interface and user authentication, the app allows easy interaction with the time capsules.
