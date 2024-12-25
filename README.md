@@ -69,11 +69,7 @@ The **Time Capsule** project is a web application that allows users to send digi
 3. **Environment Setup**:
    - Create a `.env` file in the root directory and add the necessary environment variables:
    ```
-   GOOGLE_CLIENT_ID=your_google_client_id
-   GOOGLE_CLIENT_SECRET=your_google_client_secret
-   SESSION_SECRET=your_session_secret
-   MONGODB_URI=mongodb://localhost:27017/timecapsule
-   ```
+  its top secrect 
 
 4. **Run the application**:
    - Start the server using:
