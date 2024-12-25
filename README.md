@@ -31,9 +31,7 @@ The **Time Capsule** project is a web application that allows users to send digi
   - `uuid`: For generating unique identifiers for each time capsule.
   - `body-parser`: To parse incoming request bodies.
 
-## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/your-image-path/er-diagram.png) 
 
 ### Entities:
 - **User**: Contains details like `username`, `email`, and `password`.
@@ -91,7 +89,7 @@ The **Time Capsule** project is a web application that allows users to send digi
 
 ## Live Application
 
-- You can visit the live version of the Time Capsule web application at [The Time Capsule](https://the-time-capsule.onrender.com/).
+- You can visit the live version of the Time Capsule web application at [Time Capsule Live](https://the-time-capsule.onrender.com/).
 
 ## Conclusion
 
